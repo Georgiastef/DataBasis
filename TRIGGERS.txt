@@ -1,0 +1,169 @@
+-- Trigger changeSalary
+--
+DELIMITER $
+CREATE TRIGGER changeSalary
+BEFORE UPDATE ON worker
+FOR EACH ROW
+BEGIN
+IF NEW.wrk_salary < OLD.wrk_salary THEN
+SIGNAL SQLSTATE VALUE ‘45000’
+SET MESSAGE_TEXT = ‘You cannot change your salary’;
+END IF;
+END $
+DELIMITER ;
+
+
+-- Trigger denyChange
+--
+DELIMITER $
+CREATE TRIGGER denyChange
+BEFORE UPDATE ON trip
+FOR EACH ROW
+BEGIN
+IF NEW.tr_id = OLD.tr_id THEN
+IF NEW.tr_departure <> OLD.tr_departure THEN
+SIGNAL SQLSTATE VALUE ‘45000’
+SET MESSAGE_TEXT = ‘You cannot change your departure date’;
+END IF;
+IF NEW.tr_return <> OLD.tr_return THEN
+SIGNAL SQLSTATE VALUE ‘45000’
+SET MESSAGE_TEXT = ‘You cannot change your return date’;
+END IF;
+IF NEW.tr_cost <> OLD.tr_cost THEN
+SIGNAL SQLSTATE VALUE ‘45000’
+SET MESSAGE_TEXT = ‘You cannot change your trip cost’;
+END IF;
+END IF;
+END$
+DELIMITER ;
+
+
+-- Trigger log
+--
+Για τον πίνακα trip:
+-- INSERT `trip`
+
+DROP TRIGGER IF EXISTS insert_trip;
+DELIMITER $
+CREATE TRIGGER insert_trip BEFORE INSERT ON trip
+    FOR EACH ROW
+    BEGIN
+        INSERT INTO log(IT_id, activity, tables)
+        VALUES ('IT_id', 'INSERT', 'trip');
+    END$
+DELIMITER ;
+
+-- UPDATE `trip`
+
+DROP TRIGGER IF EXISTS update_trip;
+DELIMITER $
+CREATE TRIGGER update_trip BEFORE UPDATE ON trip
+    FOR EACH ROW
+    BEGIN
+        INSERT INTO log(IT_id, activity, tables)
+        VALUES ('IT_id', 'UPDATE', 'trip');
+    END$
+DELIMITER ;
+
+
+Για τον πίνακα reservation:
+-- INSERT `reservation`
+
+DROP TRIGGER IF EXISTS insert_reservation;
+DELIMITER $
+CREATE TRIGGER insert_reservation BEFORE INSERT ON reservation
+    FOR EACH ROW
+    BEGIN
+        INSERT INTO log(IT_id, activity, tables)
+        VALUES ('IT_id', 'INSERT', 'reservation');
+    END$
+DELIMITER ;
+
+-- UPDATE `reservation`
+
+DROP TRIGGER IF EXISTS update_reservation;
+DELIMITER $
+CREATE TRIGGER update_reservation BEFORE UPDATE ON reservation
+    FOR EACH ROW
+    BEGIN
+        INSERT INTO log(IT_id, activity, tables)
+        VALUES ('IT_id', 'UPDATE', 'reservation');
+    END$
+DELIMITER ;
+
+
+Για τον πίνακα event:
+-- INSERT `event`
+
+DROP TRIGGER IF EXISTS insert_event;
+DELIMITER $
+CREATE TRIGGER insert_event BEFORE INSERT ON event
+    FOR EACH ROW
+    BEGIN
+        INSERT INTO log(IT_id, activity, tables)
+        VALUES ('IT_id', 'INSERT', 'event');
+    END$
+DELIMITER ;
+
+-- UPDATE `event`
+
+DROP TRIGGER IF EXISTS update_event;
+DELIMITER $
+CREATE TRIGGER update_event BEFORE UPDATE ON event
+    FOR EACH ROW
+    BEGIN
+        INSERT INTO log(IT_id, activity, tables)
+        VALUES ('IT_id', 'UPDATE', 'event');
+    END$
+DELIMITER ;
+
+
+Για τον πίνακα travel_to:
+-- INSERT `travel_to`
+
+DROP TRIGGER IF EXISTS insert_travel_to;
+DELIMITER $
+CREATE TRIGGER insert_travel_to BEFORE INSERT ON travel_to
+    FOR EACH ROW
+    BEGIN
+        INSERT INTO log(IT_id, activity, tables)
+        VALUES ('IT_id', 'INSERT', 'travel_to');
+    END$
+DELIMITER ;
+
+-- UPDATE `travel_to`
+
+DROP TRIGGER IF EXISTS update_travel_to;
+DELIMITER $
+CREATE TRIGGER update_travel_to BEFORE UPDATE ON travel_to
+    FOR EACH ROW
+    BEGIN
+        INSERT INTO log(IT_id, activity, tables)
+        VALUES ('IT_id', 'UPDATE', 'travel_to');
+    END$
+DELIMITER ;
+
+Για τον πίνακα destination:
+-- INSERT `destination`
+
+DROP TRIGGER IF EXISTS insert_destination;
+DELIMITER $
+CREATE TRIGGER insert_destination BEFORE INSERT ON destination
+    FOR EACH ROW
+    BEGIN
+        INSERT INTO log(IT_id, activity, tables)
+        VALUES ('IT_id', 'INSERT', 'destination');
+    END$
+DELIMITER ;
+
+-- UPDATE `destination`
+
+DROP TRIGGER IF EXISTS update_destination;
+DELIMITER $
+CREATE TRIGGER update_destination BEFORE UPDATE ON destination
+    FOR EACH ROW
+    BEGIN
+        INSERT INTO log(IT_id, activity, tables)
+        VALUES ('IT_id', 'UPDATE', 'destination');
+    END$
+DELIMITER ;

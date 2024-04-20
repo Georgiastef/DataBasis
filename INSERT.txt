@@ -1,0 +1,312 @@
+#BRANCH#
+INSERT INTO branch VALUES
+(1, 'KONSTANTINOUPOLEWS', 1, 'PATRA'),
+(2, 'ARATOU', 2, 'ATHINA'),
+(3, 'PSILA ALONIA', 3, 'PATRA'),
+(4, 'KALAMIA', 4, 'KORINTHOS'),
+(5, 'ERMOU', 5, 'ATHINA'),
+(6, 'FILIAS', 6, 'FLORINA'),
+(7, 'KILKIS', 7, 'PATRA'),
+(8, 'AGIAS', 8, 'KASTORIA'),
+(9, 'NIKOLAOU', 9, 'KOZANI'),
+(10, 'ERMOU', 10, 'KORINTHOS'),
+(11, 'KONSTANTINOUPOLEWS', 3, 'THESSAONIKH'),
+(12, 'ARATOU', 7, 'KOMOTINI'),
+(13, 'ALONIA', 8, 'ALEXANDROUPOLH'),
+(14, 'KALAMIA', 10, 'KERKURA'),
+(15, 'ERMOU', 6, 'AGRINIO'),
+(16, 'FILIAS', 9, 'ATHINA'),
+(17, 'KILKI', 8, 'DRAMA'),
+(18, 'AGIAS', 1, 'BEROIA'),
+(19, 'NIKOLAOU', 20, 'KRHTH'),
+(20, 'ERMOU', 25, 'KALAMATA');
+
+
+#PHONES#
+INSERT INTO phones VALUES
+(1, 2102563985),
+(2, 2105632145),
+(3, 2741039588),
+(4, 2741039865),
+(5, 2741039744),
+(6, 2741039636),
+(7, 2825246395),
+(8, 2104569874),
+(9, 2741031455),
+(10, 2741031563),
+(11, 2102563982),
+(12, 2105632141),
+(13, 2741039589),
+(14, 2741039867),
+(15, 2741039743),
+(16, 2741039632),
+(17, 2825246394),
+(18, 2104569870),
+(19, 2741031457),
+(20, 2741031567);
+
+
+
+#WORKER#
+INSERT INTO worker VALUES
+('AM20005', 'GIWRGOS', 'GEWRGIOU', '750.60', 1),
+('AN26441', 'MARIA', 'STERGIOU', '1000.0', 2),
+('AM27445', 'GIANNHS', 'PETROU', '2050.3', 3),
+('AM20004', 'GEORGIA', 'STEFOPOULOU', '850.6', 4),
+('AT25563', 'EVELINA', 'SENI', '900.0', 5),
+('AX23654', 'MARIOS', 'KALPAXIS', '950.5', 6),
+('AK23262', 'IOANNA', 'AXELI', '800.9', 7),
+('AK26445', 'GRIGORIS', 'GRIGORIOU', '7000.0', 8),
+('AP25478', 'ANNA', 'ZAMPOUNI', '541.6', 9),
+('AP26553', 'SPIROS', 'SENIS', '654.3', 10),
+('AM20001', 'GIWRGOS', 'ALEXIOU', '250.60', 11),
+('AM26440', 'MARIA', 'VOLIRI', '6000.0', 12),
+('AN27449', 'GIANNHS', 'IOANNIDIS', '2050.3', 13),
+('AM20008', 'GEORGIA', 'VELAORA', '2850.6', 14),
+('AL25567', 'EVELINA', 'PAPADOPOULOU', '1900.0', 15),
+('AL23656', 'XRHSTOS', 'KONSTANTINIDIS', '950.5', 16),
+('AP23265', 'VANIA', 'AXELI', '800.9', 17),
+('AI26444', 'GRIGORIS', 'GKEKAS', '7000.0', 18),
+('AU25473', 'MARIA', 'LEKKA', '530.6', 19),
+('AX26552', 'GIWRGOS', 'SENIS', '650.3', 20);
+
+
+#ADMIN#
+INSERT INTO admin VALUES
+('AM20005', 'LOGISTICS', 'LOGISTIKA'),
+('AN26441', 'ADMINISTRATIVE', 'DIOIKISIS'),
+('AM27445', 'ACCOUNTING', 'OIKONOMIKO'),
+('AM20004', 'LOGISTICS', 'LOGISTIKA'),
+('AT25563', 'ADMINISTRATIVE', 'DIOIKISIS'),
+('AX23654', 'ACCOUNTING', 'OIKONOMIKO'),
+('AK23262', 'LOGISTICS', 'LOGISTIKA'),
+('AK26445', 'ADMINISTRATIVE', 'DIOIKISIS'),
+('AP25478', 'ACCOUNTING', 'OIKONOMIKO'),
+('AP26553', 'LOGISTICS', 'LOGISTIKA'),
+('AM20001', 'ACCOUNTING', 'OIKONOMIKO'),
+('AM26440', 'LOGISTICS', 'LOGISTIKA'),
+('AN27449', 'LOGISTICS', 'LOGISTIKA'),
+('AM20008', 'ADMINISTRATIVE', 'DIOIKISIS'),
+('AL25567', 'ACCOUNTING', 'OIKONOMIKO'),
+('AL23656', 'ACCOUNTING', 'OIKONOMIKO'),
+('AP23265', 'LOGISTICS', 'LOGISTIKA'),
+('AI26444', 'ADMINISTRATIVE', 'DIOIKISIS'),
+('AU25473', 'ADMINISTRATIVE', 'DIOIKISIS'),
+('AX26552', 'LOGISTICS', 'LOGISTIKA');
+
+
+#MANAGES#
+INSERT INTO manages VALUES
+('AM20005', 1),
+('AN26441', 2),
+('AM27445', 3),
+('AM20004', 4),
+('AT25563', 5),
+('AX23654', 6),
+('AK23262', 7),
+('AK26445', 8),
+('AP25478', 9),
+('AP26553', 10),
+('AM20001', 11),
+('AM26440', 12),
+('AN27449', 13),
+('AM20008', 14),
+('AL25567', 15),
+('AL23656', 16),
+('AP23265', 17),
+('AI26444', 18),
+('AU25473', 19),
+('AX26552', 20);
+
+
+#DRIVER#
+INSERT INTO driver VALUES
+('AM20005', 'A', 'LOCAL', 2),
+('AN26441', 'B', 'LOCAL', 4),
+('AM27445', 'A', 'ABROAD', 3),
+('AM20004', 'C', 'LOCAL', 10),
+('AT25563', 'D', 'ABROAD', 12),
+('AX23654', 'D', 'LOCAL', 11),
+('AK23262', 'B', 'ABROAD', 9),
+('AK26445', 'A', 'ABROAD', 8),
+('AP25478', 'A', 'ABROAD', 7),
+('AP26553', 'C', 'LOCAL', 6),
+('AM20001', 'A', 'LOCAL', 4),
+('AM26440', 'B', 'LOCAL', 5),
+('AN27449', 'C', 'ABROAD', 6),
+('AM20008', 'D', 'ABROAD', 12),
+('AL25567', 'D', 'ABROAD', 13),
+('AL23656', 'A', 'LOCAL', 10),
+('AP23265', 'A', 'LOCAL', 2),
+('AI26444', 'B', 'LOCAL', 3),
+('AU25473', 'C', 'ABROAD', 5),
+('AX26552', 'D', 'ABROAD', 4);
+
+
+#GUIDE#
+INSERT INTO guide VALUES
+('AM20005', 'Guide for trip to Florina' ),
+('AN26441', 'Guide for trip to Athens'),
+('AM27445', 'Guide for trip to Korinthos'),
+('AM20004', 'Guide for trip to Kalamata'),
+('AT25563', 'Guide for trip to Skiathos'),
+('AX23654', 'Guide for trip to Paros'),
+('AK23262', 'Guide for trip to Rodos'),
+('AK26445', 'Guide for trip to Thessaloniki'),
+('AP25478', 'Guide for trip to Andros'),
+('AP26553', 'Guide for trip to Nauplio'),
+('AM20001', 'Guide for trip to London'),
+('AM26440', 'Guide for trip to Kerkira'),
+('AN27449', 'Guide for trip to Germany'),
+('AM20008', 'Guide for trip to Patra'),
+('AL25567', 'Guide for trip to Sparti'),
+('AL23656', 'Guide for trip to Italy'),
+('AP23265', 'Guide for trip to Spain'),
+('AI26444', 'Guide for trip to Komotini'),
+('AU25473', 'Guide for trip to Patmo'),
+('AX26552', 'Guide for trip to Crete');
+
+
+#LANGUAGES#
+INSERT INTO languages VALUES
+('AM20005', 'French, Greek, English' ),
+('AN26441', 'French, Greek, English'),
+('AM27445', 'Greek, English, Arab'),
+('AM20004', 'English, German, Greek'),
+('AT25563', 'English, Greek, French'),
+('AX23654', 'Greek, English'),
+('AK23262', 'Spanish, English, Greek'),
+('AK26445', 'Arab, Greek, English'),
+('AP25478', 'Greek, English'),
+('AP26553', 'English, Greek, Persian'),
+('AM20001', 'English'),
+('AM26440', 'Italian, English'),
+('AN27449', 'Spanish, Greek, English'),
+('AM20008', 'Italian, Spanish, Greek'),
+('AL25567', 'French, Greek, Italian'),
+('AL23656', 'English'),
+('AP23265', 'Greek'),
+('AI26444', 'Spanish'),
+('AU25473', 'Italian'),
+('AX26552', 'German');
+
+
+
+#TRIP#
+INSERT INTO trip VALUES
+(21, '2023-03-03 07:00:00', '2023-03-07 21:00:00', 60, 120.0, 1, 'AM20005',  'AM20005'),
+(22, '2023-11-01 08:00:00', '2023-11-03 21:20:00', 58, 100.0, 2, 'AN26441',  'AN26441'),
+(23, '2023-11-10 08:00:00', '2023-11-15 22:00:00', 60, 200.0, 3, 'AM27445',  'AM27445'),
+(24, '2023-01-15 09:00:00', '2023-01-15 23:00:00', 20, 35.0, 4,  'AM20004',   'AM20004'),
+(25, '2023-03-03 09:09:00', '2023-03-13 20:00:00', 43, 650.0, 5, 'AT25563',  'AT25563'),
+(26, '2023-06-02 10:00:00', '2023-06-02 19:20:00', 15, 25.0, 6,  'AX23654',   'AX23654'),
+(27, '2023-12-01 11:00:00', '2023-12-06 18:00:00', 60, 360.0, 7, 'AK23262',  'AK23262'),
+(28, '2023-12-10 10:00:00', '2023-12-13 18:00:00', 50, 310.0, 8, 'AK26445',  'AK26445'),
+(29, '2023-04-20 06:00:00', '2023-04-24 19:00:00', 16, 456.0, 9, 'AP25478',  'AP25478'),
+(30, '2023-02-17 08:00:00', '2023-02-20 21:00:00', 80, 145.0, 10, 'AP26553',  'AP26553'),
+(31, '2023-05-12 07:00:00', '2023-05-17 21:00:00', 50 ,250.0 ,11, 'AM20001',  'AM20001'),
+(32, '2023-05-02 06:30:00', '2023-05-07 21:00:00', 20 ,380.50 ,12, 'AM26440', 'AM26440'),
+(33, '2023-06-01 14:00:00', '2023-06-02 20:00:00', 20, 150.00 ,13, 'AN27449', 'AN27449'),
+(34, '2023-07-05 08:30:00', '2023-07-06 21:00:00', 30 ,199.90 ,14, 'AM20008', 'AM20008'),
+(35, '2023-08-04 08:40:00', '2023-08-08 23:00:00', 11 ,100.00 ,15, 'AL25567', 'AL25567'),
+(36, '2023-01-01 08:30:00', '2023-01-05 22:00:00', 50 ,350.50 ,16, 'AL23656', 'AL23656'),
+(37, '2023-05-05 09:10:20', '2023-05-10 23:00:00', 24 ,460.00 ,17, 'AP23265', 'AP23265'),
+(38, '2023-04-05 10:30:00', '2023-04-10 21:30:00', 26 ,230.00 ,18, 'AI26444', 'AI26444'),
+(39, '2023-05-05 11:00:00', '2023-05-10 23:30:00', 60 ,330.00 ,19, 'AU25473', 'AU25473'),
+(40, '2023-02-30 08:40:00', '2023-03-04 21:40:00', 14 ,120.50 ,20, 'AX26552', 'AX26552');
+
+#EVENT#
+INSERT INTO event VALUES
+(21, '2023-03-03 06:30:00', '2023-03-07 22:00:00', 'Travel to Skiathos'),
+(22, '2023-11-01 17:00:00', '2023-11-03 23:00:00', 'Travel to Paros'),
+(23, '2023-11-10 10:30:00', '2023-11-15 19:00:00', 'Travel to Nauplio'),
+(24, '2023-01-15 11:30:00', '2023-01-15 18:00:00', 'Travel to Kalamata'),
+(25, '2023-03-03 12:00:30', '2023-03-13 22:30:00', 'Travel to Kerkira'),
+(26, '2023-06-02 13:40:58', '2023-06-02 15:00:00', 'Travel to Zakinthos'),
+(27, '2023-12-01 13:00:58', '2023-12-06 16:30:00', 'Travel to Patra'),
+(28, '2023-12-10 08:50:00', '2023-12-13 16:00:50', 'Travel to Athens'),
+(29, '2023-04-20 04:00:00', '2023-04-24 17:30:00', 'Travel to Kastoria'),
+(30, '2023-02-17 03:00:20', '2023-02-20 20:00:00', 'Travel to Florina'),
+(31, '2023-08-10 15:00:00', '2023-08-15 16:00:50', 'Travel to Akrata'),
+(32, '2023-09-20 08:30:00', '2023-09-24 20:00:40', 'Travel to Rome'),
+(33, '2023-05-07 09:00:00', '2023-05-12 20:00:00', 'Travel to Bucharest'),
+(34, '2023-10-20 09:45:00', '2023-10-24 22:00:48', 'Travel to Paris'),
+(35, '2023-06-10 05:00:00', '2023-06-14 16:00:00', 'Travel to Livadeia'),
+(36, '2023-09-22 03:00:00', '2023-09-27 18:00:00', 'Travel to Larisa'),
+(37, '2023-11-10 08:00:00', '2023-11-14 22:00:02', 'Travel to Patra'),
+(38, '2023-12-02 04:00:00', '2023-12-07 23:00:49', 'Travel to Thessaloniki'),
+(39, '2023-07-12 07:00:00', '2023-07-15 19:00:00', 'Travel to Naxos'),
+(40, '2023-10-01 11:00:00', '2023-10-05 22:00:28', 'Travel to Korinthos'); 
+
+
+#DESTINATION#
+INSERT INTO destination VALUES
+(21, 'Florina', 'Xeimerini Ekdromi', 'LOCAL', 'Greek', 21), 
+(22, 'Nauplio', 'Eksormisi sto Mpourtzi', 'LOCAL', 'Greek', 22),
+(23, 'Kalavrita', 'Xionodromiko kentro', 'LOCAL', 'Greek', 23),
+(24, 'Paros', 'Kalokairines diakopes', 'LOCAL', 'Greek', 24),
+(25, 'Germany', 'Episkepsi se autokinitoviomixanies', 'ABROAD', 'German', 25),
+(26, 'Instabull', 'Episkepsi stin Kapadokia', 'ABROAD', 'Turkish', 26),
+(27, 'Athens', 'Episkepsi ston Parthenwna', 'LOCAL', 'Greek', 27),
+(28, 'Kerkira', 'Episkepsi sto palati tis prigkipisas Sisis', 'LOCAL', 'Greek',28),
+(29, 'London', 'Periodia sta aksiotheata tis Agglias', 'ABROAD', 'English', 29),
+(30, 'Arxaia Korinthos', 'Episkepsi sto kastro', 'LOCAL', 'Greek', 30),
+(31, 'Akrata','Ekthesi Zografikis','LOCAL','Greek',31),
+(32, 'Rome', 'Episkepsi sto Pantheon','ABROAD','Italian',32), 
+(33, 'Bucharest','Loutra','ABROAD','Roumanika',33),
+(34, 'Paris','Episkepsi sto louvro','ABROAD','Gallika',34),
+(35, 'Livadeia','Episkepsi stis phges','LOCAL','Greek',35),
+(36, 'Larisa','Ekdromi sto arxaio theatro','LOCAL','Greek',36),
+(37, 'Patra','Xenagisi sto arxaiologiko mouseio','LOCAL','Greek',37),
+(38, 'Thessaloniki','Episkepsi ston leuko pirgo','LOCAL','Greek',38),
+(39, 'Naxos', 'Portara', 'LOCAL', 'Greek', 39),
+(40, 'Korinthos','Volta ston Isthmo','LOCAL','Greek',40);
+
+
+#TRAVEL_TO#
+INSERT INTO travel_to VALUES
+(21, 21, '2023-03-03 10:10:10', '2023-03-07 17:10:30'),
+(22, 22, '2023-11-01 11:20:30', '2023-11-03 23:50:20'),
+(23, 23, '2023-11-10 14:15:15', '2023-11-15 13:15:16'),
+(24, 24, '2023-01-15 20:10:50', '2023-01-15 00:20:10'),
+(25, 25, '2023-03-03 16:15:14', '2023-03-13 00:30:50'),
+(26, 26, '2023-06-02 07:05:06', '2023-06-02 20:30:50'),
+(27, 27, '2023-12-01 08:06:05', '2023-12-06 21:21:21'),
+(28, 28, '2023-12-10 06:08:04', '2023-12-13 21:00:00'),
+(29, 29, '2023-04-20 06:00:00', '2023-04-24 21:00:00'),
+(30, 30, '2023-02-17 06:00:00', '2023-02-20 22:00:00'),
+(31, 31, '2023-04-03 05:00:00', '2022-04-07 21:00:00'),
+(32, 32, '2023-12-01 06:00:00', '2022-12-03 21:00:00'),
+(33, 33, '2023-10-10 07:00:00', '2022-10-15 21:00:00'),
+(34, 34, '2023-02-15 08:04:00', '2023-02-16 22:15:00'),
+(35, 35, '2023-05-03 06:05:00', '2023-05-13 15:00:00'),
+(36, 36, '2023-06-02 06:30:00', '2023-06-03 20:20:33'),
+(37, 37, '2023-11-01 07:00:00', '2022-11-06 21:00:00'),
+(38, 38, '2023-11-10 08:00:00', '2022-11-13 22:00:00'),
+(39, 39, '2023-06-20 09:00:00', '2023-06-24 23:00:00'),
+(40, 40, '2023-07-17 17:15:00', '2023-07-20 20:00:00');
+
+
+#RESERVATION#
+INSERT INTO reservation VALUES
+(21, 60, 'Manolis', 'Kalogirou', 'ADULT'),
+(22, 5, 'Georgia', 'Stephopoulou', 'MINOR'),
+(23, 7, 'Evelina', 'Seni', 'ADULT'),
+(24, 2, 'Marios', 'Kalpaxis', 'ADULT'),
+(25, 1, 'Maria', 'Georgiou', 'MINOR'),
+(26, 23, 'Giorgos', 'Marinos', 'ADULT'),
+(27, 35, 'Anna', 'Zampouni', 'MINOR'),
+(28, 46, 'Spiros', 'Axelis', 'MINOR'),
+(29, 34, 'Ioanna', 'Axeli', 'ADULT'),
+(30, 50, 'Grigoris', 'Senis', 'ADULT'),
+(31, 16, 'Manolis', 'Andreou', 'ADULT'),
+(32, 15, 'Georgina', 'Stefou', 'MINOR'),
+(33, 7, 'Maria', 'Seni', 'ADULT'),
+(34, 21, 'Marios', 'Ioannidis', 'ADULT'),
+(35, 11, 'Mariza', 'Georgari', 'MINOR'),
+(36, 22, 'Giorgos', 'Marinopoulos', 'ADULT'),
+(37, 36, 'Anna', 'Papastathopoulou', 'MINOR'),
+(38, 44, 'Spiridwn', 'Aggelou', 'MINOR'),
+(39, 33, 'Ioanna', 'Alexiou', 'ADULT'),
+(40, 55, 'Xristos', 'Senidis', 'ADULT');
+

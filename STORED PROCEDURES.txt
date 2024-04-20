@@ -1,0 +1,77 @@
+--Procedure showDriver
+-
+DROP PROCEDURE IF EXISTS showDriver;
+DELIMITER $
+CREATE PROCEDURE showDriver(
+IN driver_AT INT,
+IN driver_name VARCHAR(25),
+IN driver_lname VARCHAR(25),
+IN driver_salary FLOAT(7,2),
+IN driver_per ENUM('A','B','C','D'),
+IN driver_route ENUM('LOCAL', 'ABROAD'),
+IN driver_exp INT
+)
+BEGIN
+	SELECT driver.drv_AT, worker.wrk_name, worker.wrk_lname,worker.wrk_salary, driver.drv_licence, driver,drv_route, driver.drv_experience
+	FROM worker
+	INTO driver_AT, driver_name, driver_lname, driver_salary, driver_per, driver_route, driver_exp	
+	INNER JOIN driver ON worker.wrk_AT = driver.drv_AT
+	INNER JOIN branch ON worker.wrk_br_code = branch.br_code	
+END$
+DELIMITER ;
+
+
+--Procedure whoAmI
+-
+DROP PROCEDURE IF EXISTS whoAmI;
+DELIMITER $
+CREATE PROCEDURE whoAmI(
+IN name CHAR(25),
+IN lname CHAR(25)
+)
+BEGIN
+        SELECT worker.wrk_name, worker.wrk_lname
+       	INTO name, lname
+	FROM worker
+	WHERE worker.wrk_lname=lname AND worker.wrk_name=name;
+	IF (name=worker.wrk_name AND lname=worker.wrk_lname) THEN 
+		SELECT 'OK';
+	ELSE
+		SELECT 'You cant delete, you are Admin';
+	END IF;
+END$
+DELIMITER ;
+
+--Procedure returnCostumersa
+-
+DROP PROCEDURE IF EXISTS returnCostumersa;
+DELIMITER $
+CREATE PROCEDURE returnCostumersa(
+IN last_name VARCHAR(50),
+OUT total SMALLINT UNSIGNED
+)
+BEGIN
+    SELECT offers_res_lname, offers_res_name FROM reservation_offers
+    WHERE offers_res_lname = last_name;
+    SELECT COUNT(offers_res_lname) INTO total FROM reservation_offers
+    WHERE offers_lname = last_name;
+END$
+DELIMITER ;
+
+
+--Procedure returnCostumers
+-
+
+DELIMITER $
+CREATE PROCEDURE returnCostumers(
+IN first_num INT,
+IN second_num INT,
+OUT costumers VARCHAR(25)
+)
+BEGIN
+    SELECT offers_res_name, offers_res_lname FROM reservation_offers
+    WHERE offers_res_id BETWEEN first_num AND second_num;
+    SELECT offers_res_name, offers_res_lname INTO costumers FROM reservation_offers
+    WHERE offers_res_id BETWEEN first_num AND second_num;
+END$
+DELIMITER ;
